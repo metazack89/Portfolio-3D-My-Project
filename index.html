@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portafolio 3D</title>
+    <!-- Enlace a hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "pMYQUNDeT9lp7ZShy",
+            });
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Controles de idioma y tema -->
+    <div class="controls">
+        <button class="toggle-theme" onclick="toggleTheme()">Modo Oscuro</button>
+        <div class="language-switch">
+            <a href="index.html"><img src="images/espana.png" alt="Español" onclick="switchLanguage('es')"></a>
+            <a href="index-en.html"><img src="images/reino-unido.png" alt="Inglés" onclick="switchLanguage('en')"></a>
+        </div>
+    </div>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1 class="logo-text">Mi Portafolio</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-about">Sobre mí</a></li>
+                <li><a href="#skills" class="nav-skills">Habilidades</a></li>
+                <li><a href="#projects" class="nav-projects">Proyectos</a></li>
+                <li><a href="#contact" class="nav-contact">Contáctame</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Sobre mí -->
+    <section id="about" class="section">
+        <h2 class="about-title">Sobre mí</h2>
+        <div class="about-container">
+            <img src="images/cris1.jpg" alt="Imagen de perfil" class="profile-image">
+            <p class="about-text">
+            <h2>Soy un desarrollador web apasionado con experiencia en HTML, CSS y JavaScript, dedicado a crear
+                experiencias
+                digitales únicas, dinámicas y atractivas. Mi dominio de Git me permite trabajar eficientemente en
+                proyectos
+                colaborativos y mantener un flujo de trabajo organizado. Siempre busco innovar y superar las
+                expectativas en
+                cada proyecto que realizo.</h2>
+            </p>
+            <a href="images/joto league.jpg" class="cv-button" download>Descargar CV</a>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="gallery" class="section">
+        <h2 class="gallery-title">Galería</h2>
+        <div class="images-container">
+            <img src="images/padre1.jpg" alt="Imagen Padre">
+            <img src="images/perfil.jpeg" alt="Imagen Perfil">
+            <img src="images/perfil2.jpeg" alt="Imagen Perfil 2">
+        </div>
+    </section>
+
+    <!-- Contenedor principal 3D -->
+    <main class="main-wrapper">
+        <div class="wrapper">
+            <!-- Portada izquierda -->
+            <div class="cover cover-left">
+                <div class="content">
+                    <h2 class="welcome-title">Bienvenido</h2>
+                    <h4>
+                        <p class="welcome-text">Este es mi portafolio interactivo en 3D</p>
+                    </h4>
+                    <img src="icons/icons8-github.gif" alt="icons8-github" class="icon">
+                    <img src="icons/icons8-linkedin-circled.gif" alt="icons8-linkedin-circled" class="icon">
+                    <img src="icons/icons8-facebook.gif" alt="icons8-facebook" class="icon">
+                </div>
+            </div>
+            <!-- Portada derecha -->
+            <div class="cover cover-right">
+                <div class="content">
+                    <h2 class="discover-title">Descubre más.</h2>
+                    <h4>
+                        <p class="discover-text">descubre la magia de la programación.</p>
+                    </h4>
+                    <img src="icons/icons8-computer-64.png" alt="icons8-computer-64" class="icon">
+                    <img src="icons/icons8-prodigy-64.png" alt="icons8-prodigy-64" class="icon">
+                    <img src="icons/icons8-hardworking-64.png" alt="icons8-hardworking-64" class="icon">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sección Habilidades -->
+    <section id="skills" class="section">
+        <h2 class="skills-title">Habilidades</h2>
+        <div class="icon-container">
+            <img src="icons/icons8-html-5.svg" alt="Ícono de HTML" class="icon">
+            <img src="icons/icons8-css3.svg" alt="Ícono de CSS" class="icon">
+            <img src="icons/icons8-javascript.svg" alt="Ícono de JavaScript" class="icon">
+            <img src="icons/icons8-git.svg" alt="Ícono de Git" class="icon">
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="projects" class="section">
+        <h2 class="projects-title">Proyectos</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3 class="project1-title">Proyecto 1</h3>
+                <h4>
+                    <p class="project1-desc">Este juego, desarrollado en Canvas y JavaScript, representa una experiencia
+                        interactiva en la que el jugador controla un personaje (un guerrero o vikingo) que debe capturar
+                        princesas dentro de un área delimitada. El objetivo principal es acumular puntos al atrapar a
+                        las
+                        princesas, como se indica en el marcador</p>
+                </h4>
+                <img src="images/image.png" alt="Proyecto 1" class="project-image">
+            </div>
+            <div class="project-card">
+                <h3 class="project2-title">Proyecto 2</h3>
+                <h4>
+                    <p class="project2-desc">Este juego inspirado en Dragon Ball Z, desarrollado con Canvas y
+                        JavaScript, presenta un escenario dinámico con un fondo cósmico y personajes icónicos de la
+                        serie. El jugador controla a un personaje (probablemente uno de los guerreros Z) en un entorno
+                        de combate </p>
+                </h4>
+                <img src="images/image (1).png" alt="Proyecto 2" class="project-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="section">
+        <h2 class="contact-title">Contáctame</h2>
+        <!-- Formulario con atributos necesarios para EmailJS -->
+        <form id="contactForm" class="contact-form">
+            <input type="text" name="name" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+            <textarea name="message" placeholder="Tu mensaje" rows="4" required></textarea>
+            <button type="submit" class="contact-button">Enviar</button>
+        </form>
+    </section>
+
+    <!-- MODAL DE CONFIRMACIÓN -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p>¡Mensaje enviado con éxito!</p>
+            <button id="btn_close-modal" class="close-button">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p class="footer-text">© 2025 Mi Portafolio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="send_forms.js"></script>
+</body>
+
+</html>

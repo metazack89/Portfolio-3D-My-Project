@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>3D Portfolio</title>
+  <!-- Stylesheet link -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "pMYQUNDeT9lp7ZShy",
+      });
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- Language and theme controls -->
+  <div class="controls">
+    <button class="toggle-theme" onclick="toggleTheme()">Dark Mode</button>
+    <div class="language-switch">
+      <a href="index.html"><img src="images/espana.png" alt="Spanish" onclick="switchLanguage('es')"></a>
+      <a href="index-en.html"><img src="images/reino-unido.png" alt="English" onclick="switchLanguage('en')"></a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <h1 class="logo-text">My Portfolio</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-about">About Me</a></li>
+        <li><a href="#skills" class="nav-skills">Skills</a></li>
+        <li><a href="#projects" class="nav-projects">Projects</a></li>
+        <li><a href="#contact" class="nav-contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="section">
+    <h2 class="about-title">About Me</h2>
+    <div class="about-container">
+      <img src="images/cris1.jpg" alt="Profile Image" class="profile-image">
+      <p class="about-text">
+      <h2>I am a passionate web developer with experience in HTML, CSS, and JavaScript, dedicated to creating unique,
+        dynamic, and engaging digital experiences. My expertise in Git allows me to work efficiently on collaborative
+        projects and maintain an organized workflow. I always strive to innovate and exceed expectations in every
+        project I undertake.</h2>
+      </p>
+      <a href="images/YgbO.gif" class="cv-button" download>Download CV</a>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <h2 class="gallery-title">Gallery</h2>
+    <div class="images-container">
+      <img src="images/padre1.jpg" alt="Parent Image">
+      <img src="images/perfil.jpeg" alt="Profile Image">
+      <img src="images/perfil2.jpeg" alt="Profile Image 2">
+    </div>
+  </section>
+
+  <!-- Main 3D Container -->
+  <main class="main-wrapper">
+    <div class="wrapper">
+      <!-- Left Cover -->
+      <div class="cover cover-left">
+        <div class="content">
+          <h2 class="welcome-title">Welcome</h2>
+          <h4>
+            <p class="welcome-text">This is my interactive 3D portfolio.</p>
+          </h4>
+          <img src="icons/icons8-github.gif" alt="icons8-github" class="icon">
+          <img src="icons/icons8-linkedin-circled.gif" alt="icons8-linkedin-circled" class="icon">
+          <img src="icons/icons8-facebook.gif" alt="icons8-facebook" class="icon">
+        </div>
+      </div>
+      <!-- Right Cover -->
+      <div class="cover cover-right">
+        <div class="content">
+          <h2 class="discover-title">Discover More.</h2>
+          <h4>
+            <p class="discover-text">Discover the magic of programming.</p>
+          </h4>
+          <img src="icons/icons8-computer-64.png" alt="icons8-computer-64" class="icon">
+          <img src="icons/icons8-prodigy-64.png" alt="icons8-prodigy-64" class="icon">
+          <img src="icons/icons8-hardworking-64.png" alt="icons8-hardworking-64" class="icon">
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2 class="skills-title">Skills</h2>
+    <div class="icon-container">
+      <img src="icons/icons8-html-5.svg" alt="HTML Icon" class="icon">
+      <img src="icons/icons8-css3.svg" alt="CSS Icon" class="icon">
+      <img src="icons/icons8-javascript.svg" alt="JavaScript Icon" class="icon">
+      <img src="icons/icons8-git.svg" alt="Git Icon" class="icon">
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2 class="projects-title">Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3 class="project1-title">Project 1</h3>
+        <h4>
+          <p class="project1-desc">This game, developed in Canvas and JavaScript, offers an interactive experience where
+            the player controls a character (a warrior or viking) tasked with capturing princesses within a confined
+            area. The main objective is to score points by catching the princesses, as indicated on the scoreboard.</p>
+        </h4>
+        <img src="images/image.png" alt="Project 1" class="project-image">
+      </div>
+      <div class="project-card">
+        <h3 class="project2-title">Project 2</h3>
+        <h4>
+          <p class="project2-desc">This game inspired by Dragon Ball Z, developed with Canvas and JavaScript, features a
+            dynamic setting with a cosmic background and iconic characters from the series. The player controls a
+            character (likely one of the Z fighters) in a combat environment.</p>
+        </h4>
+        <img src="images/image (1).png" alt="Project 2" class="project-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2 class="contact-title">Contact Me</h2>
+    <!-- Form with attributes required for EmailJS -->
+    <form id="contactForm" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit" class="contact-button">Send</button>
+    </form>
+  </section>
+
+  <!-- Confirmation Modal -->
+  <div id="modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <p>Message sent successfully!</p>
+      <button id="btn_close-modal" class="close-button">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-text">© 2025 My Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="send_forms.js"></script>
+</body>
+
+</html>
