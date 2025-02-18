@@ -1,4 +1,3 @@
-// Cambiar entre modo oscuro y claro
 function toggleTheme() {
   const body = document.body;
   body.classList.toggle('dark-theme');
@@ -7,14 +6,12 @@ function toggleTheme() {
   button.textContent = body.classList.contains('dark-theme') ? 'Light Mode' : 'Dark Mode';
 }
 
-// Cambiar idioma (simulado)
 function switchLanguage(lang) {
   // alert(lang === 'es' ? 'Idioma cambiado a Español' : 'Language switched to English');
 }
 
-// Enviar formulario con EmailJS
 function sendEmail(event) {
-  event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+  event.preventDefault();
 
   const form = event.target;
   const messageDiv = document.createElement('div');
@@ -22,9 +19,9 @@ function sendEmail(event) {
   messageDiv.textContent = 'Sending message...';
   form.appendChild(messageDiv);
 
-  const serviceID = 'service_klbqa3s'; // Reemplaza con tu Service ID de EmailJS
-  const templateID = 'template_6eefduc'; // Reemplaza con tu Template ID de EmailJS
-  const publicKey = 'pMYQUNDeT9lp7ZShy'; // Reemplaza con tu Public Key de EmailJS
+  const serviceID = 'service_klbqa3s';
+  const templateID = 'template_6eefduc';
+  const publicKey = 'pMYQUNDeT9lp7ZShy';
 
   emailjs.init(publicKey);
 
@@ -44,7 +41,6 @@ function sendEmail(event) {
     });
 }
 
-// Animaciones de íconos
 function addIconAnimations() {
   const icons = document.querySelectorAll('.icon');
   icons.forEach(icon => {
@@ -59,15 +55,21 @@ function addIconAnimations() {
     });
   });
 }
-
-// Inicializar eventos al cargar el DOM
 document.addEventListener('DOMContentLoaded', () => {
-  // Configurar el formulario
   const form = document.querySelector('.contact-form');
   if (form) {
     form.addEventListener('submit', sendEmail);
   }
 
-  // Agregar animaciones a los íconos
+  const toggleButton = document.querySelector('.toggle-theme');
   addIconAnimations();
+});
+
+
+const buttons = document.querySelectorAll('.btn-ver-mas');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    console.log('View More button clicked');
+  });
 });

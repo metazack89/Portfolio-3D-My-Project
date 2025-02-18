@@ -1,16 +1,16 @@
-const formDOM = document.querySelector('#contactForm'); // Selector actualizado
-const modalDOM = document.querySelector('#modal'); // Si usas un modal, asegúrate de tenerlo en tu HTML
+const formDOM = document.querySelector('#contactForm');
+const modalDOM = document.querySelector('#modal');
 const buttonCloseDOM = document.querySelector('#btn_close-modal');
 
 function openModal() {
   if (modalDOM) {
-    modalDOM.style.display = 'block'; // Mostrar modal (si no soporta `open`)
+    modalDOM.style.display = 'block';
   }
 }
 
 function closeModal() {
   if (modalDOM) {
-    modalDOM.style.display = 'none'; // Ocultar modal (si no soporta `open`)
+    modalDOM.style.display = 'none';
   }
 }
 
@@ -45,4 +45,4 @@ if (buttonCloseDOM) {
   buttonCloseDOM.addEventListener('click', closeModal);
 }
 
-export default sendEmail;
+

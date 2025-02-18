@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>3D Portfolio</title>
-  <!-- Stylesheet link -->
+  <link rel="icon" href="icons/icons8-pokemon-pointer-48.png" type="icons8-pokemon-pointer-48">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <!-- Language and theme controls -->
+
   <div class="controls">
     <button class="toggle-theme" onclick="toggleTheme()">Dark Mode</button>
     <div class="language-switch">
@@ -31,22 +31,28 @@
     </div>
   </div>
 
-  <!-- Header -->
   <header class="header">
     <nav class="navbar">
       <div class="logo">
         <h1 class="logo-text">My Portfolio</h1>
       </div>
       <ul class="nav-links">
-        <li><a href="#about" class="nav-about">About Me</a></li>
-        <li><a href="#skills" class="nav-skills">Skills</a></li>
-        <li><a href="#projects" class="nav-projects">Projects</a></li>
-        <li><a href="#contact" class="nav-contact">Contact Me</a></li>
+        <li>
+          <h4><a href="#about" class="nav-about">About Me</a></h4>
+        </li>
+        <li>
+          <h4><a href="#skills" class="nav-skills">Skills</a></h4>
+        </li>
+        <li>
+          <h4><a href="#projects" class="nav-projects">Projects</a></h4>
+        </li>
+        <li>
+          <h4><a href="#contact" class="nav-contact">Contact Me</a></h4>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <!-- About Me Section -->
   <section id="about" class="section">
     <h2 class="about-title">About Me</h2>
     <div class="about-container">
@@ -61,7 +67,6 @@
     </div>
   </section>
 
-  <!-- Gallery -->
   <section id="gallery" class="section">
     <h2 class="gallery-title">Gallery</h2>
     <div class="images-container">
@@ -71,10 +76,9 @@
     </div>
   </section>
 
-  <!-- Main 3D Container -->
   <main class="main-wrapper">
     <div class="wrapper">
-      <!-- Left Cover -->
+
       <div class="cover cover-left">
         <div class="content">
           <h2 class="welcome-title">Welcome</h2>
@@ -86,7 +90,7 @@
           <img src="icons/icons8-facebook.gif" alt="icons8-facebook" class="icon">
         </div>
       </div>
-      <!-- Right Cover -->
+
       <div class="cover cover-right">
         <div class="content">
           <h2 class="discover-title">Discover More.</h2>
@@ -102,7 +106,6 @@
     </div>
   </main>
 
-  <!-- Skills Section -->
   <section id="skills" class="section">
     <h2 class="skills-title">Skills</h2>
     <div class="icon-container">
@@ -113,7 +116,6 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects" class="section">
     <h2 class="projects-title">Projects</h2>
     <div class="projects-container">
@@ -124,6 +126,7 @@
             the player controls a character (a warrior or viking) tasked with capturing princesses within a confined
             area. The main objective is to score points by catching the princesses, as indicated on the scoreboard.</p>
         </h4>
+        <h4><a href="https://github.com/metazack89" target="_blank" class="btn-ver-mas">See more</a></h4>
         <img src="images/image.png" alt="Project 1" class="project-image">
       </div>
       <div class="project-card">
@@ -133,24 +136,23 @@
             dynamic setting with a cosmic background and iconic characters from the series. The player controls a
             character (likely one of the Z fighters) in a combat environment.</p>
         </h4>
+        <h4><a href="https://github.com/metazack89" target="_blank" class="btn-ver-mas">See more</a></h4>
         <img src="images/image (1).png" alt="Project 2" class="project-image">
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="section">
     <h2 class="contact-title">Contact Me</h2>
-    <!-- Form with attributes required for EmailJS -->
+
     <form id="contactForm" class="contact-form">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit" class="contact-button">Send</button>
+      <h4><button type="submit" class="contact-button">Send</button></h4>
     </form>
   </section>
 
-  <!-- Confirmation Modal -->
   <div id="modal" class="modal" style="display: none;">
     <div class="modal-content">
       <p>Message sent successfully!</p>
@@ -158,9 +160,10 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="footer">
-    <p class="footer-text">© 2025 My Portfolio. All rights reserved.</p>
+    <h4>
+      <p class="footer-text">© 2025 My Portfolio. All rights reserved.</p>
+    </h4>
   </footer>
 
   <script src="script.js"></script>

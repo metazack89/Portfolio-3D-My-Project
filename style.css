@@ -1,4 +1,3 @@
-/* General */
 body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
@@ -6,6 +5,7 @@ body {
 	background-color: #f4f4f9;
 	color: #333;
 	transition: background-color 0.3s ease, color 0.3s ease;
+	scroll-behavior: smooth;
 }
 
 h1,
@@ -41,7 +41,6 @@ button:hover {
 	background-color: #0056b3;
 }
 
-/* Controles de idioma y tema */
 .controls {
 	display: flex;
 	justify-content: space-between;
@@ -78,7 +77,6 @@ button:hover {
 	border: 2px solid #007bff;
 }
 
-/* Encabezado */
 .header {
 	background-color: #007bff;
 	color: #fff;
@@ -113,7 +111,6 @@ button:hover {
 	color: #ffdd57;
 }
 
-/* Sección Sobre mí */
 .section {
 	padding: 40px 20px;
 	text-align: center;
@@ -145,9 +142,9 @@ button:hover {
 
 .cv-button:hover {
 	background-color: #0056b3;
+	color: #fff;
 }
 
-/* Galería */
 .images-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -168,7 +165,6 @@ button:hover {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Portafolio 3D */
 .main-wrapper {
 	perspective: 1000px;
 	margin: 40px 0;
@@ -201,7 +197,6 @@ button:hover {
 	transform: rotateY(15deg);
 }
 
-/* Habilidades */
 .icon-container {
 	display: flex;
 	justify-content: center;
@@ -221,7 +216,6 @@ button:hover {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Proyectos */
 .projects-container {
 	display: flex;
 	gap: 20px;
@@ -229,16 +223,34 @@ button:hover {
 	flex-wrap: wrap;
 }
 
+.btn-ver-mas {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	font-size: 16px;
+	transition: background-color 0.3s ease, color 0.3s ease,
+		text-decoration 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+	background-color: forestgreen;
+	color: black;
+	text-decoration: underline;
+}
+
 .project-card {
-	width: 300px; /* Ancho fijo para cada tarjeta */
+	width: 300px;
 	padding: 10px;
 	background-color: #fff;
 	border: 1px solid #ddd;
 	border-radius: 10px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	text-align: center; /* Centrar contenido */
-	overflow: hidden; /* Asegura que nada sobresalga */
+	text-align: center;
+	overflow: hidden;
 }
 
 .project-card:hover {
@@ -258,20 +270,18 @@ button:hover {
 	margin-bottom: 10px;
 }
 
-/* Ajuste de las imágenes */
 .project-card .project-image {
-	width: 100%; /* La imagen ocupa todo el ancho disponible */
-	height: 180px; /* Altura fija para mantener la uniformidad */
-	object-fit: cover; /* Ajusta la imagen para que encaje sin deformarse */
-	border-radius: 8px; /* Bordes redondeados */
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	border-radius: 8px;
 	transition: transform 0.3s ease;
 }
 
 .project-card .project-image:hover {
-	transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+	transform: scale(1.05);
 }
 
-/* Contacto */
 .contact-form {
 	display: flex;
 	flex-direction: column;
@@ -312,7 +322,6 @@ body.dark-theme .contact-form textarea {
 	background-color: #0056b3;
 }
 
-/* Estilo del modal */
 .modal {
 	position: fixed;
 	top: 0;
@@ -348,7 +357,6 @@ body.dark-theme .contact-form textarea {
 	background-color: #0056b3;
 }
 
-/* Pie de página */
 .footer {
 	text-align: center;
 	padding: 20px;
@@ -356,7 +364,6 @@ body.dark-theme .contact-form textarea {
 	color: #fff;
 }
 
-/* Modo Oscuro */
 body.dark-theme {
 	background-color: #222;
 	color: #f4f4f9;
@@ -388,4 +395,50 @@ body.dark-theme a {
 
 body.dark-theme a:hover {
 	color: #3399ff;
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.nav-links {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.about-container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.images-container img {
+		width: 100%;
+		height: auto;
+	}
+
+	.projects-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.project-card {
+		width: 90%;
+	}
+}
+
+@media (max-width: 480px) {
+	.header {
+		font-size: 1.2rem;
+	}
+
+	.nav-links a {
+		font-size: 0.9rem;
+	}
+
+	.profile-image {
+		width: 100px;
+		height: 100px;
+	}
 }

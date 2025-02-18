@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portafolio 3D</title>
-    <!-- Enlace a hoja de estilos -->
+    <link rel="icon" href="icons/icons8-pokemon-pointer-48.png" type="icons8-pokemon-pointer-48">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <!-- Controles de idioma y tema -->
+
     <div class="controls">
         <button class="toggle-theme" onclick="toggleTheme()">Modo Oscuro</button>
         <div class="language-switch">
@@ -31,22 +31,29 @@
         </div>
     </div>
 
-    <!-- Encabezado -->
     <header class="header">
         <nav class="navbar">
             <div class="logo">
                 <h1 class="logo-text">Mi Portafolio</h1>
             </div>
             <ul class="nav-links">
-                <li><a href="#about" class="nav-about">Sobre mí</a></li>
-                <li><a href="#skills" class="nav-skills">Habilidades</a></li>
-                <li><a href="#projects" class="nav-projects">Proyectos</a></li>
-                <li><a href="#contact" class="nav-contact">Contáctame</a></li>
+                <li>
+                    <h4><a href="#about" class="nav-about">Sobre mí</a></h4>
+                </li>
+                <li>
+                    <h4><a href="#skills" class="nav-skills">Habilidades</a></h4>
+                </li>
+                <li>
+                    <h4><a href="#projects" class="nav-projects">Proyectos</a></h4>
+                </li>
+                <li>
+                    <h4><a href="#contact" class="nav-contact">Contáctame</a></h4>
+                </li>
+
             </ul>
         </nav>
     </header>
 
-    <!-- Sección Sobre mí -->
     <section id="about" class="section">
         <h2 class="about-title">Sobre mí</h2>
         <div class="about-container">
@@ -64,7 +71,6 @@
         </div>
     </section>
 
-    <!-- Galería -->
     <section id="gallery" class="section">
         <h2 class="gallery-title">Galería</h2>
         <div class="images-container">
@@ -74,10 +80,8 @@
         </div>
     </section>
 
-    <!-- Contenedor principal 3D -->
     <main class="main-wrapper">
         <div class="wrapper">
-            <!-- Portada izquierda -->
             <div class="cover cover-left">
                 <div class="content">
                     <h2 class="welcome-title">Bienvenido</h2>
@@ -89,7 +93,6 @@
                     <img src="icons/icons8-facebook.gif" alt="icons8-facebook" class="icon">
                 </div>
             </div>
-            <!-- Portada derecha -->
             <div class="cover cover-right">
                 <div class="content">
                     <h2 class="discover-title">Descubre más.</h2>
@@ -104,7 +107,6 @@
         </div>
     </main>
 
-    <!-- Sección Habilidades -->
     <section id="skills" class="section">
         <h2 class="skills-title">Habilidades</h2>
         <div class="icon-container">
@@ -115,7 +117,6 @@
         </div>
     </section>
 
-    <!-- Sección Proyectos -->
     <section id="projects" class="section">
         <h2 class="projects-title">Proyectos</h2>
         <div class="projects-container">
@@ -128,6 +129,9 @@
                         las
                         princesas, como se indica en el marcador</p>
                 </h4>
+
+                <h4><a href="https://github.com/metazack89" target="_blank" class="btn-ver-mas">Ver
+                        más</a></h4>
                 <img src="images/image.png" alt="Proyecto 1" class="project-image">
             </div>
             <div class="project-card">
@@ -138,24 +142,23 @@
                         serie. El jugador controla a un personaje (probablemente uno de los guerreros Z) en un entorno
                         de combate </p>
                 </h4>
+                <h4><a href="https://github.com/metazack89" target="_blank" class="btn-ver-mas">Ver
+                        más</a></h4>
                 <img src="images/image (1).png" alt="Proyecto 2" class="project-image">
             </div>
         </div>
     </section>
 
-    <!-- Sección Contacto -->
     <section id="contact" class="section">
         <h2 class="contact-title">Contáctame</h2>
-        <!-- Formulario con atributos necesarios para EmailJS -->
         <form id="contactForm" class="contact-form">
             <input type="text" name="name" placeholder="Tu nombre" required>
             <input type="email" name="email" placeholder="Tu correo electrónico" required>
             <textarea name="message" placeholder="Tu mensaje" rows="4" required></textarea>
-            <button type="submit" class="contact-button">Enviar</button>
+            <h4><button type="submit" class="contact-button">Enviar</button></h4>
         </form>
     </section>
 
-    <!-- MODAL DE CONFIRMACIÓN -->
     <div id="modal" class="modal" style="display: none;">
         <div class="modal-content">
             <p>¡Mensaje enviado con éxito!</p>
@@ -163,9 +166,10 @@
         </div>
     </div>
 
-    <!-- Pie de página -->
     <footer class="footer">
-        <p class="footer-text">© 2025 Mi Portafolio. Todos los derechos reservados.</p>
+        <h4>
+            <p class="footer-text">© 2025 Mi Portafolio. Todos los derechos reservados.</p>
+        </h4>
     </footer>
 
     <script src="script.js"></script>
